@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Compressed files
+*.huff
+*.bin
+
+# Decompressed output
+decoded*
+*.restored
