@@ -13,20 +13,6 @@ This implementation builds the Huffman tree using a **min-priority queue** (via 
 * **Robust CLI**: A clean command-line interface using `argparse` with `encode` and `decode` commands.
 * **Custom Binary Format**: Uses a custom header to store the tree and file metadata, allowing the decoder to reconstruct the data perfectly.
 
-## Project Structure
-
-```
-huffman-coding/
-├── .gitignore               # Ignores generated files
-├── LICENSE                  # MIT license file
-├── README.md                # This documentation
-├── main.py                  # The main runnable script (CLI)
-└── huffman/
-    ├── __init__.py          # Makes 'huffman' a Python package
-    ├── node.py              # Defines the HuffmanNode dataclass
-    └── coder.py             # Contains the HuffmanCompressor class
-```
-
 ## How It Works
 
 ### Algorithm
@@ -55,6 +41,20 @@ The compressed `.huff` file has a custom header to allow for decompression:
 | 4 | **Tree Length**: The number of *bits* used by the serialized tree. |
 | 1 | **Padding Bits**: The number of '0' bits (0-7) added to the end to make a full byte. |
 | N | **Packed Data**: The rest of the file, containing the tree bits and the data bits packed tightly into bytes. |
+
+## Project Structure
+
+```
+huffman-coding/
+├── .gitignore               # Ignores generated files
+├── LICENSE                  # MIT license file
+├── README.md                # This documentation
+├── main.py                  # The main runnable script (CLI)
+└── huffman/
+    ├── __init__.py          # Makes 'huffman' a Python package
+    ├── node.py              # Defines the HuffmanNode dataclass
+    └── coder.py             # Contains the HuffmanCompressor class
+```
 
 ## Usage
 
