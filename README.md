@@ -1,4 +1,4 @@
-# Python Huffman Coding
+# Huffman Coding Algorithm
 
 This project is a Python implementation of the Huffman coding algorithm for lossless data compression. It was developed for an Algorithms & Data Structures course and has been built as an efficient command-line tool.
 
